@@ -22,6 +22,8 @@ npm install
 
 #### For better optimized images (optional)
 
+Install [libvips](https://github.com/libvips/libvips) with its optional dependencies
+
 On macOS with homebrew:
 
 ```
