@@ -1,0 +1,26 @@
+name: CI
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: macos-10.15
+    steps:
+      - run: brew install vips
+      - uses: actions/checkout@v2
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - run: npm ci
+      - name: Build for production
+        run: npm run build
+      - name: Install netlify
+        run: npm install netlify-cli -g
+      - name: Deploy to Netlify
+        run: netlify deploy --prod --dir=dist
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
