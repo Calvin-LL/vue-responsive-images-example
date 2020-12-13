@@ -28,24 +28,6 @@ module.exports = {
       .use("resize")
       .loader("webpack-image-resize-loader")
       .options({
-        sharpOptions: {
-          jpeg: {
-            trellisQuantisation: true,
-            overshootDeringing: true,
-            progressive: true,
-            optimiseScans: true,
-            quantisationTable: 8,
-          },
-          webp: {
-            smartSubsample: true,
-            reductionEffort: 6,
-          },
-          png: {
-            progressive: true,
-            adaptiveFiltering: true,
-            palette: true,
-          },
-        },
         fileLoaderOptions: {
           outputPath: "img",
         },
