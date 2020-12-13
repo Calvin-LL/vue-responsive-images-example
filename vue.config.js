@@ -21,7 +21,7 @@ module.exports = {
       .use("srcset")
       .loader("webpack-image-srcset-loader")
       .options({
-        sizes: ["500w", "1000w", "1500w", null],
+        sizes: ["480w", "1024w", "1920w", "2560w", null],
         esModule: false,
       })
       .end()
@@ -55,8 +55,18 @@ module.exports = {
       // if no previous resourceQuery match
       .oneOf("normal")
       .use("normal")
-      .loader(config.module.rule("images").use("url-loader").get("loader"))
-      .options(config.module.rule("images").use("url-loader").get("options"));
+      .loader(
+        config.module
+          .rule("images")
+          .use("url-loader")
+          .get("loader")
+      )
+      .options(
+        config.module
+          .rule("images")
+          .use("url-loader")
+          .get("options")
+      );
 
     config.module.rule("images").uses.delete("url-loader");
   },
