@@ -6,9 +6,8 @@ on:
 
 jobs:
   deploy:
-    runs-on: macos-10.15
+    runs-on: ubuntu-latest
     steps:
-      - run: brew install vips
       - uses: actions/checkout@v2
       - name: Setup Node.js environment
         uses: actions/setup-node@v1
