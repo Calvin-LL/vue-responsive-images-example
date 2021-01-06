@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
+    "@vue/cli-service": "~4.5.10",
     "@vue/compiler-sfc": "^3.0.0",
     "webpack-image-placeholder-loader": "^1.1.20",
     "webpack-image-resize-loader": "^3.0.6",
