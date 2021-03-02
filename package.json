@@ -7,7 +7,7 @@
     "serve": "vue-cli-service serve"
   },
   "dependencies": {
-    "core-js": "^3.8.3",
+    "core-js": "^3.9.1",
     "vue": "^3.0.7"
   },
   "devDependencies": {
