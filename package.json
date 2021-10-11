@@ -13,7 +13,7 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.13",
     "@vue/cli-service": "~4.5.13",
-    "@vue/compiler-sfc": "^3.2.2",
+    "@vue/compiler-sfc": "^3.2.20",
     "webpack-image-placeholder-loader": "^1.2.0",
     "webpack-image-resize-loader": "^4.0.0",
     "webpack-image-srcset-loader": "^5.0.3"
